@@ -9,7 +9,7 @@ import '../assets/style/style.css';
 function Header() {
     return(
         <>
-        <header>
+        <header data-testid="header-component">
            <nav>
             <div className="logo">
                 <a href="/"><LiaEthereum  className="logo-icon"/></a>

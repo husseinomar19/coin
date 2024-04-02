@@ -5,21 +5,22 @@ import { FaChartPie } from "react-icons/fa";
 import { IoWallet } from "react-icons/io5";
 import { MdNewspaper } from "react-icons/md";
 import { IoSettingsSharp } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 function SideBar(){
     return(
         <div className="sidedbar">
                 <div className="upsidebar">
                     <div className="ithems bezonder">
                         <MdSpaceDashboard className="ithems-icon bezonder"/>
-                        <p>DashBoard</p>
+                        <p><Link to="/">DashBoard</Link></p>
                     </div>
                     <div className="ithems">
                         <FaRegUser className="ithems-icon"/>
-                        <p>Account</p>
+                        <p><Link to="/test">Account</Link></p>
                     </div>
                     <div className="ithems">
                         <FaChartPie className="ithems-icon"/>
-                        <p>Chart</p>
+                        <p><Link to="/test2">Chart</Link></p>
                     </div>
                     <div className="ithems">
                         <IoWallet className="ithems-icon"/>

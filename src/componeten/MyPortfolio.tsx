@@ -2,6 +2,7 @@ import { FaBitcoin } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
 import { useState, useEffect } from 'react';
 
+
 interface CoinData {
     symbol: string;
     name: string;
@@ -23,25 +24,20 @@ interface CoinData {
 function MyPortfolio() {
     const [portfolioItems, setPortfolioItems] = useState<CoinData[]>([]);
 
-    // useEffect(() => {
-    //     const storedPortfolio = localStorage.getItem('favorites');
-    //     if (storedPortfolio) {
-    //         setPortfolioItems(JSON.parse(storedPortfolio));
-    //     }
-    // }, []);
-
-    const removeFromFavorites = (symbol: string) => {
-        const updatedItems = portfolioItems.filter(item => item.symbol !== symbol);
-        setPortfolioItems(updatedItems);
-        localStorage.setItem('favorites', JSON.stringify(updatedItems));
-    };
-
     useEffect(() => {
         const storedPortfolio = localStorage.getItem('favorites');
         if (storedPortfolio) {
             setPortfolioItems(JSON.parse(storedPortfolio));
         }
     }, [portfolioItems]);
+
+    const removeFromFavorites = (symbol: string) => {
+        const updatedItems = portfolioItems.filter(item => item.symbol !== symbol);
+        setPortfolioItems(updatedItems);
+        localStorage.setItem('favorites', JSON.stringify(updatedItems));
+
+      
+    };
 
     return (
         <div className="myportfolio">

@@ -119,6 +119,10 @@ header nav{
     border-radius: 20px;
     align-items: center;
 }
+.ithems p a {
+    color: white;
+    text-decoration: none;
+}
 .upsidebar{
     display: flex;
     justify-content: center;
