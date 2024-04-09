@@ -2,7 +2,7 @@
 import { FaArrowLeftLong } from "react-icons/fa6";
 function UserInfo(){
     return(
-        <div className="user-info">
+        <div className="user-info"  data-testid="user-component">
                     <div className="user-saldo">
                         <p>Total Balance</p>
                         <h1>$154,10<span>.00</span></h1>

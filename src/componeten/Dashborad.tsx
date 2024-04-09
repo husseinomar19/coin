@@ -92,7 +92,7 @@ interface CoinData {
       }, []);  
     return(
         <>
-         <header>
+         <header data-testid="dash-component">
            <nav>
             <div className="logo">
                 <a href="/"><LiaEthereum  className="logo-icon"/></a>

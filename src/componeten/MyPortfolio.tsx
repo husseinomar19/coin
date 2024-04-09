@@ -29,7 +29,8 @@ function MyPortfolio() {
         if (storedPortfolio) {
             setPortfolioItems(JSON.parse(storedPortfolio));
         }
-    }, [portfolioItems]);
+    },[]);
+    
 
     const removeFromFavorites = (symbol: string) => {
         const updatedItems = portfolioItems.filter(item => item.symbol !== symbol);
@@ -38,6 +39,11 @@ function MyPortfolio() {
 
       
     };
+
+   
+
+
+
 
     return (
         <div className="myportfolio">
