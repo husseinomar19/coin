@@ -116,7 +116,7 @@ interface CoinData {
 
         </header>
 
-        <div className="main">
+        <div className="main" >
             <SideBar />
             {/* Het begint Dashboard */}
             <div className="dashborad">
@@ -139,10 +139,10 @@ interface CoinData {
            <MyPortfolio />
           <div className="buttons">
           {visibleItems < data.length && (
-          <button className="more" onClick={showMoreItems}>Load More</button>
+          <button className="more" data-testid="load-more-button" onClick={showMoreItems}>Load More</button>
         )}
         {data.length > 7 && visibleItems < data.length && (
-        <button className="more" onClick={showLessItems}>
+        <button className="more" data-testid="load-less-button" onClick={showLessItems}>
           Load Less
         </button>
       )}

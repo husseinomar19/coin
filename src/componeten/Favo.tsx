@@ -51,7 +51,7 @@ function Favo(){
 
             {/* card */}
         {data.slice(0, visibleItems).map((item, index) => (
-            <div className="top" key={index}>
+            <div className="top" key={index} data-testid="crypto-card">
 
                 <div className="top-titel">
 
